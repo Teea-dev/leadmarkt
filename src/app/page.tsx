@@ -1,12 +1,13 @@
 import * as React from "react";
 import Nav from "./_global-components/defaultNavbar";
+import Hero from "./_global-components/heroSection";
 
 function Home() {
   return (
     <>
       <div>
         <Nav />
-        <p>Leadmarkt</p>
+        <Hero />
       </div>
     </>
   );

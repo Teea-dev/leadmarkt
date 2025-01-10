@@ -23,7 +23,7 @@ const Hero = () => {
             Tool for Conversion
           </h1>
 
-          <p className="text-[#4C5C75] text-lg">
+          <p className="text-[#4C5C75] text-lg font-medium">
             Automated marketing solutions to capture leads
             <br />
             and drive growth.
@@ -65,7 +65,7 @@ const Hero = () => {
                 ]}
                 numPeople={4}
               />
-              <p className="text-sm text-[#4C5C75]">
+              <p className="text-base text-[#4C5C75]">
                 Join 1,500+ team on the waitlist
               </p>
             </div>

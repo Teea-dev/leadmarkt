@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { ToolsIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
+import { ChevronRight } from 'lucide-react';
 
 const ToolsTab = () => {
   return (
@@ -21,7 +22,7 @@ const ToolsTab = () => {
 
           <div className="space-y-4">
             <Button className="bg-[#F0F0F0] hover:bg-[#006E75] hover:text-[#F0F0F0] text-[#006E75] px-8 py-6 rounded-md text-base">
-              Notify Me →
+              Notify Me  <ChevronRight />
             </Button>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { RouteIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
-
+import { ChevronRight } from "lucide-react";
 const AutomateTab = () => {
   return (
     <div className="w-full px-6 md:px-16 py-12 md:py-10 bg-[#FFFFFF] rounded-[24px]">
@@ -21,7 +21,7 @@ const AutomateTab = () => {
 
           <div className="space-y-4">
             <Button className="bg-[#F0F0F0] hover:bg-[#006E75] hover:text-[#F0F0F0] text-[#006E75] px-8 py-6 rounded-md text-base">
-              Notify Me →
+              Notify Me <ChevronRight />
             </Button>
           </div>
         </div>
@@ -29,7 +29,7 @@ const AutomateTab = () => {
         <div className="w-full md:w-[90%] ">
           <Image
             src="/images/automate.webp"
-            alt="automateion Image"
+            alt="automation Image"
             width={500}
             height={500}
           />

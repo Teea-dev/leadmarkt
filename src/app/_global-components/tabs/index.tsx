@@ -1,7 +1,6 @@
 "use client ";
 import { StarIcon } from "../icons";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AutomateTab from "./_local-components/automate";
 import ConvertionsTab from "./_local-components/conversions";
@@ -58,7 +57,7 @@ text-lg"
             <ManageTab />
           </TabsContent>
           <TabsContent className="mt-16" value="scale">
-           <ToolsTab />
+            <ToolsTab />
           </TabsContent>
         </Tabs>
       </div>

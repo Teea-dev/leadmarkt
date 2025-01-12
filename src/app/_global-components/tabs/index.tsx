@@ -3,6 +3,7 @@ import { StarIcon } from "../icons";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AutomateTab from "./_local-components/automate";
 
 const Tab = () => {
   return (
@@ -17,7 +18,7 @@ const Tab = () => {
         </h2>
       </div>
       <div className="items-center flex">
-        <Tabs defaultValue="automate" className="  mt-10">
+        <Tabs defaultValue="automate" className=" items-center flex flex-col  mt-10">
           <TabsList
             className=" p-2 bg-[#E3E7EA] rounded-[100px]  h-[70px]  text-[#000F1F] font-medium
 text-lg"
@@ -41,7 +42,9 @@ text-lg"
               Scale Your Business
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="automate">Features</TabsContent>
+          <TabsContent className="mt-16" value="automate">
+            <AutomateTab />
+          </TabsContent>
           <TabsContent value="conversions">Benefits</TabsContent>
           <TabsContent value="manage">Testimonials</TabsContent>
           <TabsContent value="scale">Testimonials</TabsContent>

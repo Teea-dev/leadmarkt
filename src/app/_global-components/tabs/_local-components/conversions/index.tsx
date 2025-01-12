@@ -1,22 +1,22 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { RouteIcon } from "@/app/_global-components/icons";
+import { BoostIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
 
-const AutomateTab = () => {
+const ConvertionsTab = () => {
   return (
-    <div className="w-full px-6 md:px-16 py-12 md:py-10 bg-[#FFFFFF] rounded-[24px]">
+    <div className="w-full px-6 md:px-16 py-10 md:py-10 bg-[#FFFFFF] rounded-[24px]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="flex flex-col space-y-6 gap-6 max-w-xl">
-          <RouteIcon />
+          <BoostIcon />
           <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
-            Automate Task, Save Time.
+            Boost Conversations
           </h1>
 
           <p className="text-[#4C5C75] text-sm  font-medium">
-            Simplify workflows with automated emails, follow-ups, and campaign
-            triggers—so you can focus on growth while we handle the rest.
+            Track performance in real-time, test what works, and optimize every
+            touchpoint to turn leads into loyal customers.
           </p>
 
           <div className="space-y-4">
@@ -26,9 +26,9 @@ const AutomateTab = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[90%] ">
+        <div className="w-full md:w-[70%] ">
           <Image
-            src="/images/automate.webp"
+            src="/images/conversions.webp"
             alt="automateion Image"
             width={500}
             height={500}
@@ -39,4 +39,4 @@ const AutomateTab = () => {
   );
 };
 
-export default AutomateTab;
+export default ConvertionsTab;

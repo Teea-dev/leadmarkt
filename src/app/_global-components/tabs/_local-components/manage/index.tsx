@@ -1,22 +1,22 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { RouteIcon } from "@/app/_global-components/icons";
+import { TrackIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
 
-const AutomateTab = () => {
+const ManageTab = () => {
   return (
-    <div className="w-full px-6 md:px-16 py-12 md:py-10 bg-[#FFFFFF] rounded-[24px]">
+    <div className="w-full px-6 md:px-16 py-10 md:py-10 bg-[#FFFFFF] rounded-[24px]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="flex flex-col space-y-6 gap-6 max-w-xl">
-          <RouteIcon />
+          <TrackIcon />
           <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
-            Automate Task, Save Time.
+            Track and Close Deals
           </h1>
 
           <p className="text-[#4C5C75] text-sm  font-medium">
-            Simplify workflows with automated emails, follow-ups, and campaign
-            triggers—so you can focus on growth while we handle the rest.
+            From capturing leads to managing pipelines, get a clear view of
+            every opportunity and move them forward with ease.
           </p>
 
           <div className="space-y-4">
@@ -26,10 +26,10 @@ const AutomateTab = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[90%] ">
+        <div className="w-full md:w-[70%] ">
           <Image
-            src="/images/automate.webp"
-            alt="automateion Image"
+            src="/images/leads.webp"
+            alt="track and close deals Image"
             width={500}
             height={500}
           />
@@ -39,4 +39,4 @@ const AutomateTab = () => {
   );
 };
 
-export default AutomateTab;
+export default ManageTab;

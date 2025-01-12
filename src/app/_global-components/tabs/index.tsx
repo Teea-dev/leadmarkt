@@ -4,6 +4,9 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AutomateTab from "./_local-components/automate";
+import ConvertionsTab from "./_local-components/conversions";
+import ManageTab from "./_local-components/manage";
+import ToolsTab from "./_local-components/tools";
 
 const Tab = () => {
   return (
@@ -18,7 +21,10 @@ const Tab = () => {
         </h2>
       </div>
       <div className="items-center flex">
-        <Tabs defaultValue="automate" className=" items-center flex flex-col  mt-10">
+        <Tabs
+          defaultValue="automate"
+          className=" items-center flex flex-col  mt-10"
+        >
           <TabsList
             className=" p-2 bg-[#E3E7EA] rounded-[100px]  h-[70px]  text-[#000F1F] font-medium
 text-lg"
@@ -45,9 +51,15 @@ text-lg"
           <TabsContent className="mt-16" value="automate">
             <AutomateTab />
           </TabsContent>
-          <TabsContent value="conversions">Benefits</TabsContent>
-          <TabsContent value="manage">Testimonials</TabsContent>
-          <TabsContent value="scale">Testimonials</TabsContent>
+          <TabsContent className="mt-16" value="conversions">
+            <ConvertionsTab />
+          </TabsContent>
+          <TabsContent className="mt-16" value="manage">
+            <ManageTab />
+          </TabsContent>
+          <TabsContent className="mt-16" value="scale">
+           <ToolsTab />
+          </TabsContent>
         </Tabs>
       </div>
     </div>

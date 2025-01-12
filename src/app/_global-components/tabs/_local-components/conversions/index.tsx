@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { BoostIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
 const ConvertionsTab = () => {
   return (
     <div className="w-full px-6 md:px-16 py-10 md:py-10 bg-[#FFFFFF] rounded-[24px]">
@@ -21,7 +21,7 @@ const ConvertionsTab = () => {
 
           <div className="space-y-4">
             <Button className="bg-[#F0F0F0] hover:bg-[#006E75] hover:text-[#F0F0F0] text-[#006E75] px-8 py-6 rounded-md text-base">
-              Notify Me  <ChevronRight />
+              Notify Me <ChevronRight />
             </Button>
           </div>
         </div>

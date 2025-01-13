@@ -2,7 +2,7 @@ import React from "react";
 
 const WaitlistBanner = () => {
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden bg-[#F5F5F5]">
+    <div className="relative w-full max-w-7xl px-[120px] mx-auto overflow-hidden bg-[#F5F5F5]">
       <div className="relative bg-teal-700 rounded-lg px-8 py-16 text-center">
         <svg
           className="absolute top-0 right-0"

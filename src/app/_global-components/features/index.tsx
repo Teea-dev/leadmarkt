@@ -6,7 +6,7 @@ import Connect from "./_local-components/connect";
 
 const Features = () => {
   return (
-    <section className="w-full py-16 px-4 bg-[#F4F4F4]">
+    <section className="w-full py-16 px-32 bg-[#F4F4F4]">
     
       <div className=" flex items-center flex-col gap-6 text-center mb-16">
       <div className="flex items-center border border-l-[#E1E5E7] w-fit rounded-lg px-3 py-2 gap-2  bg-[#FFFFFF]">

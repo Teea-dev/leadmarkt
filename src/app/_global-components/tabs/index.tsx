@@ -9,7 +9,7 @@ import ToolsTab from "./_local-components/tools";
 
 const Tab = () => {
   return (
-    <div className="w-full px-6 md:px-16 py-12 md:py-20 bg-[#F5F5F5] flex items-center flex-col">
+    <div className="w-full px-6 md:px-32 py-12 md:py-20 bg-[#F5F5F5] flex items-center flex-col">
       <div className="flex items-center border border-l-[#E1E5E7] w-fit rounded-lg px-3 py-2 gap-2  bg-[#FFFFFF]">
         <StarIcon />
         <p className="text-[#4C5C75] text-sm font-medium">WHY CHOOSE US</p>

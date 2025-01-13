@@ -6,8 +6,8 @@ import { Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <section className="w-full py-16 px-4 bg-[#F4F4F4]">
-      <div className=" flex  justify-between gap-16 max-w-6xl mx-auto mb-6">
+    <section className="w-full py-16 px-[120px] mt-20 bg-[#F4F4F4]">
+      <div className=" flex  justify-between gap-16 max-w-6xl mx-auto mb-20">
         <div className="md:w-[50%] flex flex-col gap-10">
           <Image
             src="/images/logo.webp"
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-6">
             <h3 className="text-[#000F1F] font-medium text-lg">Get In Touch</h3>
-            <span className="flex flex-col gap-4" >
+            <span className="flex flex-col gap-4">
               <p className="text-wrap text-[#4C5C75] text-base font-normal flex gap-2">
                 <Mail />
                 info@webtech.com
@@ -64,6 +64,16 @@ const Footer = () => {
               </p>
             </span>
           </div>
+        </div>
+      </div>
+      <hr />
+      <div className="flex justify-between max-w-6xl items-center mt-8">
+        <div>
+          <h3 className="text-[#4C5C75] text-base font-normal">© 2024 Leadmarkt. All rights reserved</h3>
+        </div>
+        <div className="flex items-center gap-10 text-[#4C5C75] text-base font-normal">
+          <h3 >Privacy Policy</h3>
+          <h3>Terms & Conditions</h3>
         </div>
       </div>
     </section>

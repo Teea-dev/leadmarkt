@@ -30,7 +30,7 @@ const Nav = () => {
         </div>
       )}
 
-      <nav className="w-full px-4 md:px-6 py-4 flex flex-wrap justify-between items-center  bg-white relative">
+      <nav className="w-full px-4 md:px-20 py-4 flex flex-wrap justify-between items-center  bg-white relative">
         <div className="flex items-center space-x-2">
           <div className="text-white px-3 py-1 rounded">
             <Image

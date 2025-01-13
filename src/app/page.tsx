@@ -5,6 +5,7 @@ import Tabs from "./_global-components/tabs";
 import Features from "./_global-components/features";
 import Testatement from "./_global-components/testatement";
 import WaitlistBanner from "./_global-components/waitlist";
+import Footer from "./_global-components/footer";
 function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ function Home() {
         <Features />
         <Testatement />
         <WaitlistBanner/>
+        <Footer/>
       </div>
     </>
   );

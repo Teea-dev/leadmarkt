@@ -4,6 +4,8 @@ import Image from "next/image";
 import { RouteIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { TextAnimate } from "@/components/ui/text-animate";
+
 const AutomateTab = () => {
   return (
     <div className="w-full px-6 md:px-16 py-12 md:py-10 bg-[#FFFFFF] rounded-[24px]">
@@ -11,12 +13,16 @@ const AutomateTab = () => {
         <div className="flex flex-col space-y-6 gap-6 max-w-xl">
           <RouteIcon />
           <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
-            Automate Task, Save Time.
+            <TextAnimate animation="slideUp" by="word">
+              Automate Task, Save Time.
+            </TextAnimate>
           </h1>
 
           <p className="text-[#4C5C75] text-sm  font-medium">
-            Simplify workflows with automated emails, follow-ups, and campaign
-            triggers—so you can focus on growth while we handle the rest.
+          <TextAnimate animation="fadeIn" by="line"  delay={2}>
+           {` Simplify workflows with automated emails, follow-ups, and campaign \n\n
+            triggers—so you can focus on growth while we handle the rest.`}
+            </TextAnimate>
           </p>
 
           <div className="space-y-4">

@@ -3,7 +3,8 @@ import React from "react";
 import Image from "next/image";
 import { ToolsIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 const ToolsTab = () => {
   return (
@@ -12,17 +13,21 @@ const ToolsTab = () => {
         <div className="flex flex-col space-y-6 gap-6 max-w-xl">
           <ToolsIcon />
           <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
-            Tools That Grow With You.
+            <TextAnimate animation="slideUp" by="word">
+              Tools That Grow With You.
+            </TextAnimate>
           </h1>
 
           <p className="text-[#4C5C75] text-sm  font-medium">
-            Whether you're starting small or scaling fast, access flexible tools
-            designed to support your growth at every stage.
+            <TextAnimate animation="fadeIn" by="line" delay={2} as='p'>
+              {` Whether you're starting small or scaling fast, access flexible tools \n\n
+            designed to support your growth at every stage.`}
+            </TextAnimate>
           </p>
 
           <div className="space-y-4">
             <Button className="bg-[#F0F0F0] hover:bg-[#006E75] hover:text-[#F0F0F0] text-[#006E75] px-8 py-6 rounded-md text-base">
-              Notify Me  <ChevronRight />
+              Notify Me <ChevronRight />
             </Button>
           </div>
         </div>

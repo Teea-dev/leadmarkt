@@ -4,6 +4,8 @@ import Image from "next/image";
 import { BoostIcon } from "@/app/_global-components/icons";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { TextAnimate } from "@/components/ui/text-animate";
+
 const ConvertionsTab = () => {
   return (
     <div className="w-full px-6 md:px-16 py-10 md:py-10 bg-[#FFFFFF] rounded-[24px]">
@@ -11,12 +13,16 @@ const ConvertionsTab = () => {
         <div className="flex flex-col space-y-6 gap-6 max-w-xl">
           <BoostIcon />
           <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
-            Boost Conversations
+            <TextAnimate animation="slideUp" by="word">
+              Boost Conversations
+            </TextAnimate>
           </h1>
 
           <p className="text-[#4C5C75] text-sm  font-medium">
-            Track performance in real-time, test what works, and optimize every
-            touchpoint to turn leads into loyal customers.
+            <TextAnimate animation="fadeIn" by="line" delay={2}>
+             {` Track performance in real-time, test what works, and optimize \n\n
+              every touchpoint to turn leads into loyal customers.`}
+            </TextAnimate>
           </p>
 
           <div className="space-y-4">

@@ -14,34 +14,34 @@ const TrackIcon = ({ width = 72, height = 73 }: IconTypes) => {
       <path
         d="M35 30.5H45"
         stroke="#4C5C75"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
         d="M35 36.5H45"
         stroke="#4C5C75"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
         d="M35 42.5H45"
         stroke="#4C5C75"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
         d="M27 31.8929C27 31.8929 28 32.5447 28.5 33.5C28.5 33.5 30 29.75 32 28.5"
         stroke="#4C5C75"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M27 42.8929C27 42.8929 28 43.5447 28.5 44.5C28.5 44.5 30 40.75 32 39.5"
         stroke="#4C5C75"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

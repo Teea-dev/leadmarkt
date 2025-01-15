@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { BoltIcon } from "../icons";
 import AvatarCircles from "@/components/ui/avatar-circles";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 const Hero = () => {
   return (
@@ -13,26 +14,28 @@ const Hero = () => {
           <div className="inline-flex items-center px-4 py-2 gap-2 rounded-md bg-[#C3EEE499] w-fit">
             <BoltIcon width={20} height={20} />
             <p className="text-[#4C5C75] text-sm font-medium">
-              For businesses ready to scale faster
+              <TextAnimate animation="blurInUp" by="character">
+                For businesses ready to scale faster
+              </TextAnimate>
             </p>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-medium text-[#1A1A1A] leading-tight">
-            Reliable Marketing
-          
-            Tool for Conversion
+            <TextAnimate animation="slideUp" by="word">
+              Reliable Marketing Tool for Conversion
+            </TextAnimate>
           </h1>
 
           <p className="text-[#4C5C75] text-lg font-medium">
-            Automated marketing solutions to capture leads
-            <br />
-            and drive growth.
+            <TextAnimate animation="fadeIn" by="line" as="p">
+              Automated marketing solutions to capture leads and drive growth.
+            </TextAnimate>
           </p>
 
           <div className="space-y-4 gap-5 flex flex-col ">
             <Button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 rounded-md text-base w-fit">
               Join the waitlist
-                            <svg
+              <svg
                 className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
                 fill="none"
                 viewBox="0 0 24 24"

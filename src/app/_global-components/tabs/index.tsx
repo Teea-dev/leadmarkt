@@ -6,6 +6,7 @@ import AutomateTab from "./_local-components/automate";
 import ConvertionsTab from "./_local-components/conversions";
 import ManageTab from "./_local-components/manage";
 import ToolsTab from "./_local-components/tools";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 const Tab = () => {
   return (
@@ -16,7 +17,9 @@ const Tab = () => {
       </div>
       <div className="mt-6">
         <h2 className="text-5xl md:text-6xl font-medium text-[#000F1F] leading-tight text-center">
-          Everything you need for <br /> success on a platform
+          <TextAnimate animation="slideUp" by="word">
+            Everything you need for success on a platform
+          </TextAnimate>
         </h2>
       </div>
       <div className="items-center flex">

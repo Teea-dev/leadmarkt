@@ -8,32 +8,32 @@ import { TextAnimate } from "@/components/ui/text-animate";
 
 const Hero = () => {
   return (
-    <div className="w-full px-6 md:px-32 py-12 md:py-20 bg-[#F5F5F5]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-        <div className="flex flex-col space-y-6 max-w-xl gap-2">
-          <div className="inline-flex items-center px-4 py-2 gap-2 rounded-md bg-[#C3EEE499] w-fit">
-            <BoltIcon width={20} height={20} />
-            <p className="text-[#4C5C75] text-sm font-medium">
+    <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-8 sm:py-12 lg:py-20 bg-[#F5F5F5]">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
+        <div className="flex flex-col space-y-4 sm:space-y-6 w-full lg:w-[55%] max-w-xl">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 gap-2 rounded-md bg-[#C3EEE499] w-fit">
+            <BoltIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+            <p className="text-[#4C5C75] text-xs sm:text-sm font-medium">
               <TextAnimate animation="blurInUp" by="character">
                 For businesses ready to scale faster
               </TextAnimate>
             </p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-medium text-[#1A1A1A] leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-[#1A1A1A] leading-tight">
             <TextAnimate animation="slideUp" by="word">
               Reliable Marketing Tool for Conversion
             </TextAnimate>
           </h1>
 
-          <p className="text-[#4C5C75] text-lg font-medium">
+          <p className="text-[#4C5C75] text-base sm:text-lg font-medium">
             <TextAnimate animation="fadeIn" by="line" as="p">
               Automated marketing solutions to capture leads and drive growth.
             </TextAnimate>
           </p>
 
-          <div className="space-y-4 gap-5 flex flex-col ">
-            <Button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-6 rounded-md text-base w-fit">
+          <div className="flex flex-col space-y-4 sm:space-y-5 pt-2">
+            <Button className="bg-teal-700 hover:bg-teal-800 text-white px-6 sm:px-8 py-5 sm:py-6 rounded-md text-sm sm:text-base w-fit transition-colors duration-200">
               Join the waitlist
               <svg
                 className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
@@ -50,16 +50,7 @@ const Hero = () => {
               </svg>
             </Button>
 
-            <div className="flex items-center gap-3">
-              {/* <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white bg-gray-200"
-                  >
-                  </div>
-                ))}
-              </div> */}
+            <div className="flex items-center gap-2 sm:gap-3">
               <AvatarCircles
                 avatarUrls={[
                   {
@@ -81,20 +72,23 @@ const Hero = () => {
                 ]}
                 numPeople={4}
               />
-              <p className="text-base text-[#4C5C75]">
+              <p className="text-sm sm:text-base text-[#4C5C75]">
                 Join 1,500+ team on the waitlist
               </p>
             </div>
           </div>
         </div>
 
-        <div className="w-full md:w-[45%] ">
-          <Image
-            src="/images/heroImg.webp"
-            alt="Dashboard"
-            width={500}
-            height={500}
-          />
+        <div className="w-full sm:w-4/5 lg:w-[45%] mt-8 lg:mt-0">
+          <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square">
+            <Image
+              src="/images/heroImg.webp"
+              alt="Dashboard"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>

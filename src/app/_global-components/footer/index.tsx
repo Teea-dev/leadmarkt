@@ -69,10 +69,12 @@ const Footer = () => {
       <hr />
       <div className="flex justify-between max-w-6xl items-center mt-8">
         <div>
-          <h3 className="text-[#4C5C75] text-base font-normal">© 2024 Leadmarkt. All rights reserved</h3>
+          <h3 className="text-[#4C5C75] text-base font-normal">
+            © 2024 Leadmarkt. All rights reserved
+          </h3>
         </div>
         <div className="flex items-center gap-10 text-[#4C5C75] text-base font-normal">
-          <h3 >Privacy Policy</h3>
+          <h3>Privacy Policy</h3>
           <h3>Terms & Conditions</h3>
         </div>
       </div>

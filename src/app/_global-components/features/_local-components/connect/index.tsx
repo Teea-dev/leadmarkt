@@ -13,11 +13,12 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex items-center justify-center rounded-full border-2 bg-white shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "size-10 sm:size-12 lg:size-12", // Responsive sizing
         className
       )}
     >
-      {children}
+      <div className="scale-75 sm:scale-90 lg:scale-100">{children}</div>
     </div>
   );
 });
@@ -233,34 +234,38 @@ const Connect = () => {
   const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="w-full px-6 md:px-16 py-10 md:py-10 bg-[#FFFFFF] rounded-[24px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-        <div className="flex flex-col space-y-6 gap-6 max-w-xl">
-          <div className="mb-6 flex items-center gap-2 rounded-lg border border-[#E1E5E7] w-fit px-3 py-2">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 md:py-10 bg-white rounded-lg sm:rounded-2xl">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10">
+        {/* Content Section */}
+        <div className="flex flex-col space-y-4 sm:space-y-6 w-full md:w-1/2 lg:max-w-xl">
+          <div className="flex items-center gap-2 rounded-lg border border-[#E1E5E7] w-fit px-3 py-2">
             <ConnectIcon className="text-[#4C5C75]" />
             <p className="text-[#4C5C75] text-sm font-medium">INTEGRATION</p>
           </div>
-          <h1 className="text-xl md:text-4xl md:font-medium text-[#1A1A1A] leading-tight">
+
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-[#1A1A1A] leading-tight">
             Connects seamlessly with platforms you use.
           </h1>
-          <p className="text-[#4C5C75] text-sm font-medium">
+
+          <p className="text-[#4C5C75] text-sm sm:text-base">
             Integrate with your existing CRM, e-commerce tools to streamline
             your marketing processes.
           </p>
-          <div className="space-y-4">
-            <div className="text-[#000F1F]  text-base flex items-center">
-              Get Notified
-              <ChevronRight />
-            </div>
+
+          <div className="flex items-center text-[#000F1F] text-sm sm:text-base hover:opacity-80 cursor-pointer transition-opacity">
+            Get Notified
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </div>
         </div>
 
-        <div className="w-full md:w-[100%] bg-[#F5F5F5]">
+        {/* Integration Diagram Section */}
+        <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-xl">
           <div
-            className="relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10"
+            className="relative flex h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4 sm:p-6 md:p-8 lg:p-10"
             ref={containerRef}
           >
-            <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
+            <div className="flex size-full flex-col items-stretch justify-between gap-6 sm:gap-8 md:gap-10 max-w-[280px] sm:max-w-lg max-h-[180px] sm:max-h-[200px]">
+              {/* Top Row */}
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div1Ref}>
                   <Icons.tokenBase />
@@ -269,17 +274,21 @@ const Connect = () => {
                   <Icons.mailchimp />
                 </Circle>
               </div>
+
+              {/* Middle Row */}
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div2Ref}>
                   <Icons.notion />
                 </Circle>
-                <Circle ref={div4Ref} className="size-16">
+                <Circle ref={div4Ref} className="size-12 sm:size-14 lg:size-16">
                   <Icons.airtable />
                 </Circle>
                 <Circle ref={div6Ref}>
                   <Icons.meta />
                 </Circle>
               </div>
+
+              {/* Bottom Row */}
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div3Ref}>
                   <Icons.github />
@@ -290,6 +299,7 @@ const Connect = () => {
               </div>
             </div>
 
+            {/* Animated Beams */}
             <AnimatedBeam
               containerRef={containerRef}
               fromRef={div1Ref}

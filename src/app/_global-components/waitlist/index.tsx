@@ -54,7 +54,7 @@ const WaitlistBanner = () => {
             text-sm sm:text-base
             shadow-sm hover:shadow-md
             w-full sm:w-auto">
-            Join the Waitlist
+         
             <svg
               className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
               fill="none"

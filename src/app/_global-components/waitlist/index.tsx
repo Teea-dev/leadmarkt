@@ -21,7 +21,6 @@ const WaitlistBanner = () => {
           />
         </svg>
 
-      
         <svg
           className="absolute bottom-0 left-0 w-48 sm:w-64 md:w-auto transform scale-75 sm:scale-90 md:scale-100"
           width="286"
@@ -39,7 +38,6 @@ const WaitlistBanner = () => {
           />
         </svg>
 
-        
         <div className="relative z-10 max-w-lg mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4">
             Be First to Experience
@@ -47,14 +45,16 @@ const WaitlistBanner = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8">
             LeadMarkt.
           </h2>
-          
-          <button className="bg-white text-teal-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium 
+
+          <button
+            className="bg-white text-teal-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium 
             hover:bg-teal-50 transition-all duration-200 
             inline-flex items-center justify-center group
             text-sm sm:text-base
             shadow-sm hover:shadow-md
-            w-full sm:w-auto">
-         
+            w-full sm:w-auto"
+          >
+            Join the waitlist
             <svg
               className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
               fill="none"

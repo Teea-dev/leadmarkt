@@ -86,7 +86,7 @@ export function Campaign() {
                 left: -20,
                 bottom: 20
               }}
-              barSize={window.innerWidth < 640 ? 20 : 30}
+              // barSize={window.innerWidth < 640 ? 20 : 30}
             >
               <CartesianGrid 
                 strokeDasharray="3 3" 

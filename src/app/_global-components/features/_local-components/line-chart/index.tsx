@@ -109,7 +109,7 @@ export function Component() {
                 strokeWidth={2}
                 dot={false}
                 activeDot={{
-                  r: window.innerWidth < 640 ? 4 : 6,
+                  // r: window.innerWidth < 640 ? 4 : 6,
                   fill: "#fff",
                   stroke: "#0EA5E9",
                   strokeWidth: 2,

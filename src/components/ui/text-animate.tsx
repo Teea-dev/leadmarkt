@@ -302,14 +302,14 @@ const defaultItemAnimationVariants: Record<
 
 export function TextAnimate({
   children,
-  delay = 0,
-  duration = 0.3,
-  variants,
+  delay: _delay = 0,
+  duration: _duration = 0.3,
+  variants: _variants,
   className,
   segmentClassName,
   as: Component = "p",
   startOnView = true,
-  once = false,
+  once: _once = false,
   by = "word",
   animation = "fadeIn",
   ...props
@@ -374,7 +374,7 @@ export function TextAnimate({
             custom={i * staggerTimings[by]}
             className={cn(
               by === "line" ? "inline" : "inline-block whitespace-pre",
-              segmentClassName,
+              segmentClassName
             )}
           >
             {segment}

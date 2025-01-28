@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { MoreVertical } from "lucide-react";
 import {
   Bar,
@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   XAxis,
   ResponsiveContainer,
-  Tooltip
+  Tooltip,
 } from "recharts";
 
 import {
@@ -30,7 +30,7 @@ const data = [
   { name: "Aug", value: 70 },
   { name: "Sep", value: 55 },
   { name: "Oct", value: 45 },
-  { name: "Nov", value: 50 }
+  { name: "Nov", value: 50 },
 ];
 
 const CustomTooltip = ({ active, payload }: any) => {
@@ -45,6 +45,10 @@ const CustomTooltip = ({ active, payload }: any) => {
 };
 
 export function Campaign() {
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
   return (
     <Card className="w-full h-full p-4 sm:p-5 lg:p-6 bg-white rounded-2xl sm:rounded-3xl shadow-sm">
       <CardHeader className="p-0 space-y-4 sm:space-y-5 lg:space-y-6">
@@ -75,7 +79,7 @@ export function Campaign() {
             <MoreVertical className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
-        
+
         <div className="w-full h-[200px] sm:h-[250px] lg:h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
@@ -84,37 +88,37 @@ export function Campaign() {
                 top: 20,
                 right: 20,
                 left: -20,
-                bottom: 20
+                bottom: 20,
               }}
-              // barSize={window.innerWidth < 640 ? 20 : 30}
+              barSize={windowWidth < 640 ? 20 : 30}
             >
-              <CartesianGrid 
-                strokeDasharray="3 3" 
+              <CartesianGrid
+                strokeDasharray="3 3"
                 vertical={false}
                 stroke="#F5F5F5"
               />
-              <XAxis 
+              <XAxis
                 dataKey="name"
                 axisLine={false}
                 tickLine={false}
-                tick={{ 
-                  fill: '#64748B', 
-                  fontSize: window.innerWidth < 640 ? 10 : 12 
+                tick={{
+                  fill: "#64748B",
+                  fontSize: windowWidth < 640 ? 10 : 12,
                 }}
                 padding={{ left: 10, right: 10 }}
-                interval={window.innerWidth < 640 ? 1 : 0}
+                interval={windowWidth < 640 ? 1 : 0}
               />
               <Tooltip
                 content={<CustomTooltip />}
-                cursor={{ fill: 'transparent' }}
-                wrapperStyle={{ outline: 'none' }}
+                cursor={{ fill: "transparent" }}
+                wrapperStyle={{ outline: "none" }}
               />
               <Bar
                 dataKey="value"
                 fill="#FFE7E5"
                 radius={[4, 4, 4, 4]}
                 shape={(props: any) => {
-                  const fill = props.payload.active ? '#FF8C82' : '#FFE7E5';
+                  const fill = props.payload.active ? "#FF8C82" : "#FFE7E5";
                   return <rect {...props} fill={fill} />;
                 }}
               />

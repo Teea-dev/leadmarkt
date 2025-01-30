@@ -27,7 +27,7 @@ const Tab = () => {
           </h2>
         </div>
 
-        <div className="w-full mt-6 sm:mt-10 justify-center flex " >
+        <div className="w-full mt-6 sm:mt-10 justify-center flex ">
           <Tabs defaultValue="automate" className="flex flex-col items-center">
             <div className="w-full overflow-x-auto px-4 sm:px-0">
               <TabsList className="p-1.5 sm:p-2 bg-[#E3E7EA] rounded-full min-h-[50px] sm:h-[60px] lg:h-[70px] text-[#000F1F] font-medium whitespace-nowrap mb-2 sm:mb-0">

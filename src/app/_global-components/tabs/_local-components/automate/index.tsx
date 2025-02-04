@@ -36,7 +36,7 @@ const AutomateTab = () => {
         </div>
 
         <div className="w-full sm:w-4/5 lg:w-[55%] mt-6 lg:mt-0">
-          <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square">
+          <div className="relative w-full sm:w-[50%] aspect-square sm:aspect-[4/3] lg:aspect-square">
             <Image
               src="/images/automate.webp"
               alt="automation Image"

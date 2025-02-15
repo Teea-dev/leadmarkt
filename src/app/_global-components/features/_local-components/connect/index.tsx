@@ -14,7 +14,7 @@ const Circle = forwardRef<
       ref={ref}
       className={cn(
         "z-10 flex items-center justify-center rounded-full border-2 bg-white shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        "size-10 sm:size-12 lg:size-12", 
+        "size-10 sm:size-12 lg:size-12",
         className
       )}
     >
@@ -236,7 +236,6 @@ const Connect = () => {
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 md:py-10 bg-white rounded-lg sm:rounded-2xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10">
-        
         <div className="flex flex-col space-y-4 sm:space-y-6 w-full md:w-1/2 lg:max-w-xl">
           <div className="flex items-center gap-2 rounded-lg border border-[#E1E5E7] w-fit px-3 py-2">
             <ConnectIcon className="text-[#4C5C75]" />
@@ -258,14 +257,12 @@ const Connect = () => {
           </div>
         </div>
 
-        
-        <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-xl">
+        <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-xl border border-[#F5F5F5]">
           <div
             className="relative flex h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-4 sm:p-6 md:p-8 lg:p-10"
             ref={containerRef}
           >
             <div className="flex size-full flex-col items-stretch justify-between gap-6 sm:gap-8 md:gap-10 max-w-[280px] sm:max-w-lg max-h-[180px] sm:max-h-[200px]">
-             
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div1Ref}>
                   <Icons.tokenBase />
@@ -275,7 +272,6 @@ const Connect = () => {
                 </Circle>
               </div>
 
-              
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div2Ref}>
                   <Icons.notion />
@@ -288,7 +284,6 @@ const Connect = () => {
                 </Circle>
               </div>
 
-             
               <div className="flex flex-row items-center justify-between">
                 <Circle ref={div3Ref}>
                   <Icons.github />

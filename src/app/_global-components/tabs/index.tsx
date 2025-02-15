@@ -27,30 +27,30 @@ const Tab = () => {
           </h2>
         </div>
 
-        <div className="w-full mt-6 sm:mt-10 justify-center flex ">
-          <Tabs defaultValue="automate" className="flex flex-col items-center">
-            <div className="w-full overflow-x-auto px-4 sm:px-0">
-              <TabsList className="p-1.5 sm:p-2 bg-[#E3E7EA] rounded-full min-h-[50px] sm:h-[60px] lg:h-[70px] text-[#000F1F] font-medium whitespace-nowrap mb-2 sm:mb-0">
+        <div className="w-full mt-6 sm:mt-10 flex justify-start sm:justify-center">
+          <Tabs defaultValue="automate" className="w-full">
+            <div className="w-full overflow-x-auto pb-2 pl-4 pr-0 sm:px-0 sm:pb-0 scrollbar-hide">
+              <TabsList className="p-1.5 sm:p-2 bg-[#E3E7EA] rounded-full min-h-[50px] sm:h-[60px] lg:h-[70px] text-[#000F1F] font-medium inline-flex w-auto space-x-2">
                 <TabsTrigger
-                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200"
+                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200 flex-shrink-0"
                   value="automate"
                 >
                   Automate Marketing
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200"
+                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200 flex-shrink-0"
                   value="conversions"
                 >
                   Increase Conversions
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200"
+                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200 flex-shrink-0"
                   value="manage"
                 >
                   Manage Lead
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200"
+                  className="rounded-full py-2 sm:py-3 lg:py-4 px-4 sm:px-5 lg:px-7 text-sm sm:text-base lg:text-lg transition-all duration-200 flex-shrink-0"
                   value="scale"
                 >
                   Scale Your Business

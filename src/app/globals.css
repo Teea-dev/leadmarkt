@@ -70,3 +70,13 @@ body {
     @apply bg-[#F5F5F5] text-foreground;
   }
 }
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

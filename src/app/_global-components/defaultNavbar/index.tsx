@@ -30,7 +30,7 @@ const Nav = () => {
         </div>
       )}
 
-      <nav className="w-full px-4 md:px-20 py-4 flex flex-wrap justify-between items-center  bg-white relative">
+      <nav className="w-full px-4 md:px-20 py-4 flex flex-wrap justify-between items-center bg-white relative">
         <div className="flex items-center space-x-2">
           <div className="text-white px-3 py-1 rounded">
             <Image
@@ -46,9 +46,9 @@ const Nav = () => {
         <button
           className="md:hidden p-2 hover:bg-gray-100 rounded-lg"
           onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <Menu size={24} />
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -64,9 +64,9 @@ const Nav = () => {
             ))}
           </div>
         </div>
-          <Button className=" hidden md:flex bg-teal-700 hover:bg-teal-800 text-white px-6">
-            Join Waitlist
-          </Button>
+        <Button className="hidden md:flex bg-teal-700 hover:bg-teal-800 text-white px-6">
+          Join Waitlist
+        </Button>
 
         {mobileMenuOpen && (
           <div className="md:hidden w-full mt-4 bg-white border-t">

@@ -56,7 +56,7 @@ const Nav = () => {
             {["Home", "Benefits", "Features", "About"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href={`/`}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {item}
@@ -69,25 +69,25 @@ const Nav = () => {
         </Button>
 
         {mobileMenuOpen && (
-          <div className="md:hidden w-full mt-4 bg-white border-t">
+            <div className="md:hidden w-full mt-4 bg-white border-t">
             <div className="flex flex-col space-y-4 py-4">
               {["Home", "Benefits", "Features", "About"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item}
-                </Link>
+              <Link
+                key={item}
+                href={`/`}
+                className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2 hover:bg-gray-50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item}
+              </Link>
               ))}
               <div className="px-4">
-                <Button className="bg-teal-700 hover:bg-teal-800 text-white w-auto">
-                  Join Waitlist
-                </Button>
+              <Button className="bg-teal-700 hover:bg-teal-800 text-white w-auto">
+                Join Waitlist
+              </Button>
               </div>
             </div>
-          </div>
+            </div>
         )}
       </nav>
     </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MegaPhoneIcon } from "@/app/_global-components/icons";
 const Testatement = () => {
   return (
-    <div className="w-full px-6 md:px-[120px]  md:py-20 bg-[#F5F5F5] ">
+    <div id="about" className="w-full px-6 md:px-[120px]  md:py-20 bg-[#F5F5F5] ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="w-full md:w-[90%] ">
           <Image

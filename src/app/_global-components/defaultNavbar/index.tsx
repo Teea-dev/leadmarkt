@@ -13,6 +13,14 @@ const Nav = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const handleLinkClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className="w-full">
       {showBanner && (
@@ -33,13 +41,15 @@ const Nav = () => {
       <nav className="w-full px-4 md:px-20 py-4 flex flex-wrap justify-between items-center bg-white relative">
         <div className="flex items-center space-x-2">
           <div className="text-white px-3 py-1 rounded">
-            <Image
-              src="/images/logo.webp"
-              alt="Leadmarkt logo"
-              width={100}
-              height={30}
-              className="object-contain"
-            />
+            <Link href="/">
+              <Image
+                src="/images/logo.webp"
+                alt="Leadmarkt logo"
+                width={100}
+                height={30}
+                className="object-contain"
+              />
+            </Link>
           </div>
         </div>
 
@@ -53,13 +63,22 @@ const Nav = () => {
 
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex items-center space-x-6">
-            {["Home", "Benefits", "Features", "About"].map((item) => (
+            {[
+              { label: "Home", id: "home" },
+              { label: "Benefits", id: "benefits" },
+              { label: "Features", id: "features" },
+              { label: "About", id: "about" },
+            ].map((item) => (
               <Link
-                key={item}
-                href={`/`}
+                key={item.id}
+                href={`#${item.id}`}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(item.id);
+                }}
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </div>
@@ -69,25 +88,25 @@ const Nav = () => {
         </Button>
 
         {mobileMenuOpen && (
-            <div className="md:hidden w-full mt-4 bg-white border-t">
+          <div className="md:hidden w-full mt-4 bg-white border-t">
             <div className="flex flex-col space-y-4 py-4">
               {["Home", "Benefits", "Features", "About"].map((item) => (
-              <Link
-                key={item}
-                href={`/`}
-                className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2 hover:bg-gray-50"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item}
-              </Link>
+                <Link
+                  key={item}
+                  href={`/`}
+                  className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item}
+                </Link>
               ))}
               <div className="px-4">
-              <Button className="bg-teal-700 hover:bg-teal-800 text-white w-auto">
-                Join Waitlist
-              </Button>
+                <Button className="bg-teal-700 hover:bg-teal-800 text-white w-auto">
+                  Join Waitlist
+                </Button>
               </div>
             </div>
-            </div>
+          </div>
         )}
       </nav>
     </div>

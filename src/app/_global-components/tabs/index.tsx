@@ -11,7 +11,10 @@ import { TextAnimate } from "@/components/ui/text-animate";
 const Tab = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-8 sm:py-12 lg:py-20 bg-[#F5F5F5]">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <div
+        id="benefits"
+        className="max-w-7xl mx-auto flex flex-col items-center"
+      >
         <div className="flex items-center border border-l-[#E1E5E7] w-fit rounded-lg px-2.5 sm:px-3 py-1.5 sm:py-2 gap-1.5 sm:gap-2 bg-[#FFFFFF]">
           <StarIcon className="w-4 h-4 sm:w-5 sm:h-5" />
           <p className="text-[#4C5C75] text-xs sm:text-sm font-medium">
